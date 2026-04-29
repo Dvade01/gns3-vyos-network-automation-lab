@@ -26,8 +26,9 @@ ip link set eth0 up
 ```
 ## SSH Test
 ### SSH from the automation host to VyOS succeeded:
-ssh automation@10.10.10.1
+```ssh automation@10.10.10.1
 Welcome to VyOS!
+```
 
 ## Python Automation Test
 The Python Netmiko script successfully connected to VyOS, collected interface and routing information, and saved a configuration backup.
