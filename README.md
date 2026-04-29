@@ -113,16 +113,19 @@ backup_vyos_config.py
 Put this in it:
 
 ```
+import os
 from datetime import datetime
 from pathlib import Path
 from netmiko import ConnectHandler
 
 
+import os
+
 device = {
     "device_type": "vyos",
     "host": "10.10.10.1",
     "username": "automation",
-    "password": "{PASSWORD}", # will make this a into an enviroment variable later
+    "password": os.getenv("VYOS_PASSWORD"),
 }
 
 
@@ -151,4 +154,10 @@ with ConnectHandler(**device) as connection:
 
     print(f"\nSaved config backup to: {backup_file}")
 ```
-For a more professional version later, we will move the password out of the script and into an environment variable or separate ignored file.
+## Running the Script
+
+Set the lab password as an environment variable:
+
+```bash
+export VYOS_PASSWORD='<LAB_PASSWORD>'
+python backup_vyos_config.py
