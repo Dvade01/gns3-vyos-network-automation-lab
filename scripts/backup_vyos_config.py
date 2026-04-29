@@ -7,7 +7,7 @@ device = {
     "device_type": "vyos",
     "host": "10.10.10.1",
     "username": "automation",
-    "password": "<LAB_PASSWORD>",
+    "password": "<LAB_PASSWORD>", # Will be replaced
 }
 
 backup_dir = Path("backups")
