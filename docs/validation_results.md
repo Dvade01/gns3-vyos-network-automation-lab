@@ -32,4 +32,5 @@ The Python Netmiko script successfully connected to VyOS, collected interface an
 ```
 Connected to: vyos
 Saved config backup to: backups/vyos_2026-04-29_02-21-43_config.txt
+```
 
