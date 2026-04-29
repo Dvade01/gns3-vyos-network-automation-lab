@@ -14,9 +14,10 @@ ip 10.10.10.2/24 10.10.10.1
 
 ## Automation Host to VyOS Ping Test
 ### The automation host was configured with:
+```
 ip addr add 10.10.10.10/24 dev eth0
 ip link set eth0 up
-
+```
 ### Ping to VyOS succeeded:
 64 bytes from 10.10.10.1: seq=0 ttl=64
 64 bytes from 10.10.10.1: seq=1 ttl=64
