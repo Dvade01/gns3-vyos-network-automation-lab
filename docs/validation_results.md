@@ -18,11 +18,13 @@ ip 10.10.10.2/24 10.10.10.1
 ip addr add 10.10.10.10/24 dev eth0
 ip link set eth0 up
 ```
-### Ping to VyOS succeeded:
-```
-64 bytes from 10.10.10.1: seq=0 ttl=64
-64 bytes from 10.10.10.1: seq=1 ttl=64
-64 bytes from 10.10.10.1: seq=2 ttl=64
+```markdown
+Ping to VyOS succeeded:
+
+```text
+84 bytes from 10.10.10.1 icmp_seq=1 ttl=64
+84 bytes from 10.10.10.1 icmp_seq=2 ttl=64
+84 bytes from 10.10.10.1 icmp_seq=3 ttl=64
 ```
 ## SSH Test
 ### SSH from the automation host to VyOS succeeded:
