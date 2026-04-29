@@ -29,7 +29,7 @@ Welcome to VyOS!
 
 ## Python Automation Test
 The Python Netmiko script successfully connected to VyOS, collected interface and routing information, and saved a configuration backup.
-```
+
 Connected to: vyos
 Saved config backup to: backups/vyos_2026-04-29_02-21-43_config.txt
-```
+
