@@ -23,25 +23,27 @@ eth0: 10.10.10.10/24
 eth1: NAT / Internet access
 ```
 ## Tools Used
-GNS3
-VMware Workstation Pro
-GNS3 VM
-VyOS rolling release
-Alpine Linux Docker container
-Python 3
-Netmiko
-SSH
-VPCS
+
+- GNS3
+- VMware Workstation Pro
+- GNS3 VM
+- VyOS rolling release
+- Alpine Linux Docker container
+- Python 3
+- Netmiko
+- SSH
+- VPCS
 
 ## What This Lab Demonstrates
-Building a virtual network in GNS3
-Installing and configuring a VyOS router
-Configuring an internal lab subnet
-Enabling SSH access on VyOS
-Creating an automation host with Python and Netmiko
-Connecting to a router over SSH
-Collecting interface and routing information
-Backing up the router configuration with Python
+
+- Building a virtual network in GNS3
+- Installing and configuring a VyOS router
+- Configuring an internal lab subnet
+- Enabling SSH access on VyOS
+- Creating an automation host with Python and Netmiko
+- Connecting to a router over SSH
+- Collecting interface and routing information
+- Backing up the router configuration with Python
 
 ## IP Addressing
 | Device            | Interface |     IP Address | Purpose                  |
@@ -52,10 +54,12 @@ Backing up the router configuration with Python
 | automation-python | eth1      |   DHCP via NAT | Internet/package access  |
 
 ## VyOS Configuration Summary
+
+```text
 set interfaces ethernet eth0 address '10.10.10.1/24'
 set service ssh port '22'
 set system login user automation authentication plaintext-password '<LAB_PASSWORD>'
-
+```
 ##Automation Script
 The Python script connects to the VyOS router using SSH and Netmiko, runs operational commands, prints results, and saves a configuration backup.
 
