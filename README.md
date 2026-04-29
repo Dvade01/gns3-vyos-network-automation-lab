@@ -147,4 +147,4 @@ with ConnectHandler(**device) as connection:
 
     print(f"\nSaved config backup to: {backup_file}")
 ```
-
+For a more professional version later, we should move the password out of the script and into an environment variable or separate ignored file.
