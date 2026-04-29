@@ -121,13 +121,14 @@ This lab can be accessed through the GNS3 Web UI when the GNS3 VM is running.
 
 After starting the imported project, the automation container may need its lab IP and NAT interface configured again:
 
-```bash
+```
 ip addr add 10.10.10.10/24 dev eth0
 ip link set eth0 up
 udhcpc -i eth1
 source /root/netauto-venv/bin/activate
 export VYOS_PASSWORD='<LAB_PASSWORD>'
 python scripts/backup_vyos_config.py
+```
 
 ## Future Improvements
 
